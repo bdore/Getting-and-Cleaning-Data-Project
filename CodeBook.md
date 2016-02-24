@@ -6,7 +6,7 @@ Each row is an observation of a subject performing an activity and 66 variables 
 
 To create "average.txt", a list of unique subjects and activities was created from a dataset ("extracted_set" in run_analysis.R) that contained all observations of measurements that calculated means and standard deviations in the training and test datasets.
 
-The "extracted_set" dataset was then filtered by all the observations of a subject given an activity. The mean for each measurement in the filtered dataset was calculated. The result of this was one observation with 68 variables: subject, activity and 66 measurements. This observation was then inserted in a data frame. This process was run for all subjects and their activities.
+The "extracted_set" dataset was then filtered by all the observations of a subject given an activity. The mean for each measurement in the filtered dataset was calculated. The result of this was one observation with 68 variables: subject, activity and 66 measurements means. This observation was then inserted in a data frame. This process was run for all subjects and their activities.
 
 ## List of variables in average.txt
 
