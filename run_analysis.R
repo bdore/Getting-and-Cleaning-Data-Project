@@ -18,7 +18,6 @@ runAnalysis <- function(dataset){
         labels <- fread(labels_file)
         set <- fread(set_file)
         subjects <- fread(subjects_file)
-        activity_labels <- fread("activity_labels.txt")
         features_names <- fread("features.txt")
         
         ##tidy up features names
@@ -54,7 +53,7 @@ runAnalysis <- function(dataset){
         assign(paste(dataset, "_data", sep = ""), x, pos = 1)
 }
 
-##runs the above function through the datasets
+##runs the above function for each the datasets
 runAnalysis("test")
 runAnalysis("train")
 
@@ -117,4 +116,4 @@ for(i in 1:length(subjects_list)){
 }
 
 ##writes output to csv file
-write.csv(final_data, file = "average.csv", row.names = F)
+write.table(final_data, file = "average.txt", row.names = F)

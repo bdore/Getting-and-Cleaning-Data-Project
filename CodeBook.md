@@ -1,19 +1,19 @@
 # Codebook for Getting and Cleaning Data Project
 
-The average.csv file contains the dataset generated according to the project requirements.
+The "average.txt" file contains the dataset generated according to the project requirements.
 
 Each row is an observation of a subject performing an activity and 66 variables (measurements) for that activity. Each measurement value is the average of that measurement for the activity of the subject. There are 30 subjects and 6 activities for each subject in the experiment (total 180 observations in this dataset).
 
-To create the average.csv, a list of unique subjects and activities was created from a dataset ("merged_data" in run_analysis.R) that contained the full observations of the training and test datasets for the experiment.
+To create "average.txt", a list of unique subjects and activities was created from a dataset ("extracted_set" in run_analysis.R) that contained all observations of measurements that calculated means and standard deviations in the training and test datasets.
 
-The "merged_data" dataset was then filtered by all the observations of a subject given an activity. The mean for each measurement in the filtered dataset was calculated. This process was run for all subjects and their activities.
+The "extracted_set" dataset was then filtered by all the observations of a subject given an activity. The mean for each measurement in the filtered dataset was calculated. The result of this was one observation with 68 variables: subject, activity and 66 measurements. This observation was then inserted in a data frame. This process was run for all subjects and their activities.
 
-## List of variables in average.csv
+## List of variables in average.txt
 
 - Subject: the subject Id (number)
 - Activity: the activity performed by the subject (character)
 
-All variables (measurements) below are in standard gravity units 'g'. Each value in "average.csv" is the mean of all observations of that variable in "merged_data" for each activity of each subject.
+All variables (measurements) below are in standard gravity units 'g'. Each value in "average.txt" is the mean of all observations of that variable in "merged_data" for each activity of each subject.
 - tBodyAcc-mean()-X
 - tBodyAcc-mean()-Y
 - tBodyAcc-mean()-Z
@@ -55,7 +55,7 @@ All variables (measurements) below are in standard gravity units 'g'. Each value
 - fBodyAccMag-std()
 - fBodyBodyAccJerkMag-std()
 
-All variables (measurements) below are in radians/second. Each value in "average.csv" is the mean of all observations of that variable in "merged_data" for each activity of each subject.
+All variables (measurements) below are in radians/second. Each value in "average.txt" is the mean of all observations of that variable in "merged_data" for each activity of each subject.
 - tBodyGyro-mean()-X
 - tBodyGyro-mean()-Y
 - tBodyGyro-mean()-Z
@@ -83,6 +83,6 @@ All variables (measurements) below are in radians/second. Each value in "average
 - fBodyBodyGyroMag-std()
 - fBodyBodyGyroJerkMag-std()
 
-This codebook updates the explanation in the UCI HAR Dataset "features_info.txt" file with the information that each measurement value in "average.csv" is a mean.
+This codebook updates the explanation in the UCI HAR Dataset "features_info.txt" file with the information that each measurement value in "average.txt" is a mean.
 
 For practical reasons, please refer to "features_info.txt" for an explanation of each measurement name.
