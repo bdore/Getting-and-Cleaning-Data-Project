@@ -13,7 +13,7 @@ The "extracted_set" dataset was then filtered by all the observations of a subje
 - Subject: the subject Id (number)
 - Activity: the activity performed by the subject (character)
 
-All variables (measurements) below are in standard gravity units 'g'. Each value in "average.txt" is the mean of all observations of that variable in "merged_data" for each activity of each subject.
+All variables (measurements) below are in standard gravity units 'g'. Each value in "average.txt" is the mean of all observations of that variable in "extracted_set" for each activity of each subject.
 - tBodyAcc-mean()-X
 - tBodyAcc-mean()-Y
 - tBodyAcc-mean()-Z
@@ -55,7 +55,7 @@ All variables (measurements) below are in standard gravity units 'g'. Each value
 - fBodyAccMag-std()
 - fBodyBodyAccJerkMag-std()
 
-All variables (measurements) below are in radians/second. Each value in "average.txt" is the mean of all observations of that variable in "merged_data" for each activity of each subject.
+All variables (measurements) below are in radians/second. Each value in "average.txt" is the mean of all observations of that variable in "extracted_set" for each activity of each subject.
 - tBodyGyro-mean()-X
 - tBodyGyro-mean()-Y
 - tBodyGyro-mean()-Z
@@ -85,4 +85,4 @@ All variables (measurements) below are in radians/second. Each value in "average
 
 This codebook updates the explanation in the UCI HAR Dataset "features_info.txt" file with the information that each measurement value in "average.txt" is a mean.
 
-For practical reasons, please refer to "features_info.txt" for an explanation of each measurement name.
+For practical reasons, please refer to "features_info.txt" in the UCI HAR Dataset for an explanation of each measurement name.
